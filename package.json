@@ -1,77 +1,85 @@
 {
   "name": "tools",
   "version": "1.1.0",
-  "description": "Collection of tools.",
   "private": true,
-  "scripts": {
-    "lint": "concurrently npm:lint-es",
-    "lint:fix": "concurrently npm:lint-es:fix",
-    "lint-es": "eslint --ext .ts,.tsx,.js,.jsx,.json .",
-    "lint-es:file": "eslint --ext .ts,.tsx,.js,.jsx,.json",
-    "lint-es:fix": "eslint --ext .ts,.tsx,.js,.jsx,.json --fix .",
-    "lint-es:file:fix": "eslint --ext .ts,.tsx,.js,.jsx,.json --fix",
-    "format": "prettier --write \"**/*.{js,jsx,vue,ts,css,less,scss,html,htm,json,md,markdown,yml,yaml}\"",
-    "format:check": "prettier --check \"**/*.{js,jsx,vue,ts,css,less,scss,html,htm,json,md,markdown,yml,yaml}\"",
-    "format:file": "prettier --write",
-    "release:version": "next-standard-version",
-    "release:changelog": "standard-version --dry-run --skip.commit=true --skip.tag=true",
-    "release:commit": "git commit --allow-empty -m \"chore(release): trigger release process [ci release]\"",
-    "release:message": "chalk -t \"Run {green.bold git push} to publish the release or {red.bold git reset HEAD^} to undo the release.\"",
-    "release": "run-s release:changelog release:commit release:message",
-    "build": "tsc",
-    "list": "node_modules/.bin/ts-node src/tools",
-    "tools:list": "npm run list",
-    "buffer-converter": "node_modules/.bin/ts-node src/buffer-converter/cli",
-    "tools:bc": "npm run buffer-converter",
-    "hex-string-converter": "node_modules/.bin/ts-node src/hex-string-converter/cli",
-    "tools:hsc": "npm run hex-string-converter",
-    "map-gnu-symbol": "node_modules/.bin/ts-node src/map-gnu-symbol/cli",
-    "tools:mgs": "npm run map-gnu-symbol",
-    "random-data-analyser": "node_modules/.bin/ts-node src/random-data-analyser/cli",
-    "tools:rda": "npm run random-data-analyser",
-    "vidavidorra-logo": "node_modules/.bin/ts-node src/vidavidorra-logo/cli",
-    "tools:vl": "npm run vidavidorra-logo"
+  "description": "Collection of tools.",
+  "homepage": "https://github.com/vidavidorra/tools#readme",
+  "bugs": {
+    "url": "https://github.com/vidavidorra/tools/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vidavidorra/tools.git"
   },
-  "author": "Jeroen de Bruijn",
   "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/vidavidorra/tools/issues"
+  "author": "Jeroen de Bruijn",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "files": [
+    "./dist/**/!(*.test).{js,d.ts,cjs}"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"**/*.{vue,css,less,scss,html,htm,json,md,markdown,yml,yaml}\" --log-level warn",
+    "format:check": "prettier --check \"**/*.{vue,css,less,scss,html,htm,json,md,markdown,yml,yaml}\" --log-level warn",
+    "lint": "npm run format:check && eslint",
+    "lint:fix": "npm run format && eslint --fix",
+    "prepare": "husky .github/husky",
+    "test": "c8 ava"
   },
-  "homepage": "https://github.com/vidavidorra/tools#readme",
+  "commitlint": {
+    "extends": [
+      "@vidavidorra"
+    ]
+  },
+  "prettier": "@vidavidorra/prettier-config",
+  "release": {
+    "extends": "@vidavidorra/semantic-release-config"
+  },
+  "ava": {
+    "files": [
+      "src/**/*.test.ts"
+    ],
+    "typescript": {
+      "rewritePaths": {
+        "src/": "dist/"
+      },
+      "compile": "tsc"
+    }
+  },
+  "c8": {
+    "all": true,
+    "include": [
+      "dist/**/*.js"
+    ],
+    "reporter": [
+      "cobertura",
+      "html",
+      "lcovonly",
+      "text-summary"
+    ]
+  },
   "dependencies": {
-    "chalk": "4.1.0",
-    "clipboardy": "2.3.0",
-    "inquirer": "7.2.0",
-    "mustache": "4.0.1"
+    "sharp": "0.34.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "9.0.1",
-    "@commitlint/config-conventional": "9.0.1",
-    "@types/chalk": "2.2.0",
-    "@types/inquirer": "6.5.0",
-    "@types/mustache": "4.0.1",
-    "@types/node": "13.13.12",
-    "@types/sharp": "0.25.0",
-    "@typescript-eslint/eslint-plugin": "3.3.0",
-    "@typescript-eslint/parser": "3.3.0",
-    "chalk-cli": "4.1.0",
-    "concurrently": "5.2.0",
-    "eslint": "7.3.0",
-    "eslint-config-prettier": "6.11.0",
-    "eslint-plugin-json": "2.1.1",
-    "eslint-plugin-prettier": "3.1.4",
-    "husky": "4.2.5",
-    "lint-staged": "10.2.11",
-    "next-standard-version": "2.1.3",
-    "npm-run-all": "4.1.5",
-    "prettier": "2.0.5",
-    "sharp": "0.25.4",
-    "standard-version": "8.0.0",
-    "ts-node": "8.10.2",
-    "typescript": "3.9.5"
+    "@ava/typescript": "6.0.0",
+    "@commitlint/cli": "20.4.1",
+    "@types/node": "25.3.2",
+    "@vidavidorra/commitlint-config": "7.1.12",
+    "@vidavidorra/eslint-config": "1.0.3",
+    "@vidavidorra/prettier-config": "1.0.6",
+    "@vidavidorra/semantic-release-config": "1.0.4",
+    "ava": "6.4.1",
+    "c8": "10.1.3",
+    "eslint": "9.39.2",
+    "husky": "9.1.7",
+    "lint-staged": "16.2.7",
+    "prettier": "3.8.1",
+    "semantic-release": "25.0.3",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
