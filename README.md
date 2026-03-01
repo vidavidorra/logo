@@ -1,48 +1,53 @@
-# tools
+# vidavidorra logo <!-- omit in toc -->
 
-Collection of tools.
+Logo for the [vidavidorra organisation](https://github.com/vidavidorra).
 
-<a name="toc"></a>
+- Logo as [SVG](https://www.w3.org/TR/SVG/) file.
+- Logo as [PNG][png] file in various sizes.
+- Square logo as [PNG][png] file in various sizes.
+- Circular logo as [PNG][png] file in various sizes.
 
-## Table of contents
+---
 
-- [Badges](#badges)
+[![Renovate enabled](https://img.shields.io/badge/Renovate-enabled-brightgreen?logo=renovatebot&logoColor&style=flat-square)](https://renovatebot.com)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079?style=flat-square)](https://github.com/semantic-release/semantic-release)
+[![License](https://img.shields.io/github/license/vidavidorra/logo?style=flat-square)](LICENSE.md)
+
 - [Usage](#usage)
+- [Contributing](#contributing)
+- [Security policy](#security-policy)
 - [License](#license)
-
-## Badges
-
-| Badge                                                                                                                                                                                                          | Description          | Service              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | -------------------- |
-| <a href="https://github.com/prettier/prettier#readme"><img alt="code style" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"></a>                                           | Code style           | Prettier             |
-| <a href="https://conventionalcommits.org"><img alt="Conventional Commits: 1.0.0" src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square"></a>                             | Commit style         | Conventional Commits |
-| <a href="https://github.com/vidavidorra/tools/actions"><img alt="GitHub workflow status" src="https://img.shields.io/github/workflow/status/vidavidorra/tools/Lint%20commit%20messages?style=flat-square"></a> | Lint commit messages | GitHub Actions       |
-| <a href="https://github.com/vidavidorra/tools/actions"><img alt="GitHub workflow status" src="https://img.shields.io/github/workflow/status/vidavidorra/tools/Lint?style=flat-square"></a>                     | Lint                 | GitHub Actions       |
-| <a href="https://github.com/vidavidorra/tools/actions"><img alt="GitHub workflow status" src="https://img.shields.io/github/workflow/status/vidavidorra/tools/Build?style=flat-square"></a>                    | Build                | GitHub Actions       |
 
 ## Usage
 
-Use the `list` script to get an overview of the tools that can be used. An example output of the list is showed below.
+With the repository locally, use the following command to create the logo files.
 
-```shell
-$ npm run list
-buffer-converter
-  Convert a buffer (e.g. [55,10,22]) to another format (e.g. hexadecimal string).
-hex-string-converter
-  Convert a hexadecimal string (e.g. 0123456789abcdef) to another format (e.g. a C++ vector).
-map-gnu-symbol
-  Map a GNU symbol to in a symbol file.
-vidavidorra-logo
-  Create the vidavidorra logo as SVG.
+```sh
+npm start
 ```
+
+## Contributing
+
+Please [create an issue](https://github.com/vidavidorra/logo/issues/new/choose) if you have a bug report or feature proposal, or [create a discussion](https://github.com/vidavidorra/logo/discussions) if you have a question. If you like this project, please consider giving it a star ⭐
+
+Refer to the [contributing guide](https://github.com/vidavidorra/.github/blob/main/CONTRIBUTING.md) for detailed information about other contributions, like pull requests.
+
+[![Conventional Commits: 1.0.0](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow?style=flat-square)](https://conventionalcommits.org)
+[![Linter](https://img.shields.io/badge/Linter-ESLint-4B32C3?logo=eslint&style=flat-square)](https://eslint.org/)
+[![XO code style](https://shields.io/badge/code_style-5ed9c7?logo=xo&labelColor=gray&style=flat-square)](https://github.com/xojs/xo)
+[![Code style](https://img.shields.io/badge/code_style-Prettier-ff69b4?logo=prettier&style=flat-square)](https://github.com/prettier/prettier)
+
+## Security policy
+
+Please refer to the [Security Policy on GitHub](https://github.com/vidavidorra/logo/security/) for the security policy.
 
 ## License
 
 This project is licensed under the [GPLv3 license](https://www.gnu.org/licenses/gpl.html).
 
-Copyright © 2020 Jeroen de Bruijn
+Copyright © 2020-2026 Jeroen de Bruijn
 
-<details><summary>License details.</summary>
+<details><summary>License notice</summary>
 <p>
 
 This program is free software: you can redistribute it and/or modify
@@ -61,3 +66,5 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 The full text of the license is available in the [LICENSE](LICENSE.md) file in this repository and [online](https://www.gnu.org/licenses/gpl.html).
 
 </details>
+
+[png]: https://www.w3.org/TR/png/
