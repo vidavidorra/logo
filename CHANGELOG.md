@@ -1,3 +1,13 @@
+## [2.0.1](https://github.com/vidavidorra/logo/compare/v2.0.0...v2.0.1) (2026-03-01)
+
+### Bug Fixes
+
+- typos `perimiter` > `perimeter` and `therfore` > `therefore` ([4962e9d](https://github.com/vidavidorra/logo/commit/4962e9dc767086d168ed850fd142b5ad9d528c23))
+
+### Styles
+
+- format v2.0.0 changelog entry ([41ca077](https://github.com/vidavidorra/logo/commit/41ca077fabec2aac478b565bc3c8212f589b8c77))
+
 ## [2.0.0](https://github.com/vidavidorra/logo/compare/v1.1.0...v2.0.0) (2026-03-01)
 
 ### ⚠ BREAKING CHANGES
