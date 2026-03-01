@@ -62,7 +62,7 @@ class Logo {
 
   /**
    * Path of the outer, double, `V`. The points start at the top left point and
-   * go clockwise around the perimiter of the double `V`.
+   * go clockwise around the perimeter of the double `V`.
    */
   private outerPath(): Path {
     return new Path([
@@ -97,7 +97,7 @@ class Logo {
 
   /**
    * Path of the inner `V`. The points start at the top left point and go
-   * clockwise around the perimiter of the `V`.
+   * clockwise around the perimeter of the `V`.
    */
   private innerPath(): Path {
     return new Path([

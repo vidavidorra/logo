@@ -30,7 +30,7 @@ async function convertSvgToPng(
      * The resized logo is defined by a rectangle that fits inside the circle.
      * The circle also fits inside a rectangle, which where each side is the
      * `height` and the diameter of the circle is the `height`. The diagonal of
-     * the inner rectangle is the same as the `height`, therfore the sides can
+     * the inner rectangle is the same as the `height`, therefore the sides can
      * be calculated using the Pythagorean theorem.
      */
     const side = Math.ceil(height / Math.sqrt(2));
