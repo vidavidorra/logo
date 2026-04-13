@@ -1,3 +1,9 @@
+## [2.0.2](https://github.com/vidavidorra/logo/compare/v2.0.1...v2.0.2) (2026-04-13)
+
+### Bug Fixes
+
+- **deps:** update dependency prettier to v3.8.2 ([b2eaf59](https://github.com/vidavidorra/logo/commit/b2eaf593d9f0fc19a6d9815d23e8b4a5ce492443))
+
 ## [2.0.1](https://github.com/vidavidorra/logo/compare/v2.0.0...v2.0.1) (2026-03-01)
 
 ### Bug Fixes
