@@ -43,7 +43,7 @@
     "sharp": "0.34.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "21.0.1",
+    "@commitlint/cli": "21.0.2",
     "@types/node": "25.9.1",
     "@vidavidorra/commitlint-config": "8.0.0",
     "@vidavidorra/eslint-config": "1.0.4",
