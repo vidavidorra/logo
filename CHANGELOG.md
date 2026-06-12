@@ -1,3 +1,9 @@
+## [2.0.4](https://github.com/vidavidorra/logo/compare/v2.0.3...v2.0.4) (2026-06-12)
+
+### Bug Fixes
+
+- **deps:** update prettier packages to v3.8.4 ([669c428](https://github.com/vidavidorra/logo/commit/669c428c6d70c0e88548077f3f10f8ba98393cc5))
+
 ## [2.0.3](https://github.com/vidavidorra/logo/compare/v2.0.2...v2.0.3) (2026-04-18)
 
 ### Bug Fixes
