@@ -1,3 +1,9 @@
+## [2.0.5](https://github.com/vidavidorra/logo/compare/v2.0.4...v2.0.5) (2026-06-14)
+
+### Bug Fixes
+
+- **deps:** update dependency sharp to v0.35.1 ([#113](https://github.com/vidavidorra/logo/issues/113)) ([0e6a664](https://github.com/vidavidorra/logo/commit/0e6a664d65626e5ee14f08fa541a352f6e19aeec))
+
 ## [2.0.4](https://github.com/vidavidorra/logo/compare/v2.0.3...v2.0.4) (2026-06-12)
 
 ### Bug Fixes
