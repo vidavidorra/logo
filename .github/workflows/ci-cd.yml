@@ -12,13 +12,13 @@ permissions:
   pull-requests: write
 jobs:
   lint-commit-messages:
-    uses: vidavidorra/.github/.github/workflows/lint-commit-messages.yml@98194097d42083daeb6d9f9f42c27f26c4bf7753 # v8.1.24
+    uses: vidavidorra/.github/.github/workflows/lint-commit-messages.yml@691aebe7979c88fe3e0ed011f228b9f881920afa # v8.1.28
   lint:
-    uses: vidavidorra/.github/.github/workflows/node-lint.yml@98194097d42083daeb6d9f9f42c27f26c4bf7753 # v8.1.24
+    uses: vidavidorra/.github/.github/workflows/node-lint.yml@691aebe7979c88fe3e0ed011f228b9f881920afa # v8.1.28
   build:
-    uses: vidavidorra/.github/.github/workflows/node-build.yml@98194097d42083daeb6d9f9f42c27f26c4bf7753 # v8.1.24
+    uses: vidavidorra/.github/.github/workflows/node-build.yml@691aebe7979c88fe3e0ed011f228b9f881920afa # v8.1.28
   release:
-    uses: vidavidorra/.github/.github/workflows/release.yml@98194097d42083daeb6d9f9f42c27f26c4bf7753 # v8.1.24
+    uses: vidavidorra/.github/.github/workflows/release.yml@691aebe7979c88fe3e0ed011f228b9f881920afa # v8.1.28
     needs:
       - lint-commit-messages
       - lint
